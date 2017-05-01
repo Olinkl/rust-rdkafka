@@ -53,4 +53,5 @@ fn main() {
 
     println!("cargo:rustc-link-search=native={}/librdkafka/src", env::current_dir().expect("Can't find current dir").display());
     println!("cargo:rustc-link-lib=static=rdkafka");
+    println!("cargo:rustc-flags=-l sasl2");
 }
